@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row" style="height: 100vh;">
+
+
+        <!-- Left Block -->
+        <div class="col bg-warning d-flex flex-column justify-content-center align-items-center"
+            [formGroup]="fbFormGroup">
+            <div class="h2 text-light"> Login Here </div>
+
+            <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                A simple danger alert—check it out!
+            </div>
+
+
+            <div>
+                <input type="text" placeholder="Enter Email" class="form-control" formControlName="Email" />
+            </div>
+
+            <div class="mt-1">
+                <input type="password" placeholder="Enter Password" class="form-control" formControlName="Password" />
+            </div>
+
+            <button class="btn btn-sm btn-info mt-1" [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()">
+                Login Here
+            </button>
+
+
+            <!-- <p><a href="#link"></a></p> -->
+            <p><a routerLink="/forgotpassword">Forgot Password</a></p>
+
+
+            <a routerLink="/sign-up">Register Here</a>
+        </div>
+
+
+        <!-- Right Block -->
+        <div id="logRight" class="col d-flex flex-column justify-content-center align-items-center text-light">
+
+            <div>Hello Job Seeker!!</div>
+            <div>
+                <fa-icon [icon]="faMapSigns" style="font-size: 60px;"></fa-icon>
+            </div>
+            <div class="h3">Welcome to your on bording</div>
+        </div>
+
+
+    </div>
+</div>

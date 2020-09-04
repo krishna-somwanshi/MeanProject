@@ -1,0 +1,8 @@
+#contactUs{
+    /* background-image: url(https://picsum.photos/id/2/1200/1400); */
+    background-image: url(../../assets/Contact-us.jpg);
+    width: 100vh;
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

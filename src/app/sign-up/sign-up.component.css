@@ -1,0 +1,37 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+ 
+
+
+        main {
+            margin-top: 6em;
+        }
+
+        .row {
+            background-color: whitesmoke;
+            border-radius: 30px;
+            box-shadow: 14px 14px 20px gray;
+        }
+
+        .img-fluid {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            max-width: 100%;
+            height: 70vh;
+        }
+
+        .btn1 {
+            border: none;
+            outline: none;
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .btn1:hover {
+            background: green;
+            border: 1px solid;
+            color: white;
+        }

@@ -1,0 +1,13 @@
+#AboutUs{
+    background-image: url(https://picsum.photos/id/35/1200/1400);
+    width: 100vh;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

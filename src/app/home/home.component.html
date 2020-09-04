@@ -1,0 +1,19 @@
+<div class="container-fluid sticky-top  ">
+    <div class="row bg-info" style="height: 100px;">
+        <div class="col d-flex align-items-center text-dark h1">
+            <fa-icon [icon]="faMapSigns" style="font-size: 60px; color:white" class="mr-3 ml-5"></fa-icon>
+            Job Directory
+        </div>
+        <div class="col d-flex justify-content-end align-items-center">
+            <a class="btn btn-outline-dark text-light m-1" routerLink="/home/home-page">Home</a>
+            <a class="btn btn-outline-dark text-light m-1" routerLink="/home/latest-jobs">Latest Jobs</a>
+            <a class="btn btn-outline-dark text-light m-1" routerLink="/home/search">Search</a>
+            <a class="btn btn-outline-dark text-light m-1" routerLink="/home/contact-us">contact-us</a>
+            <a class="btn btn-outline-dark text-light m-1" routerLink="/home/about-us">about-us</a>
+            <button class="btn btn-outline-dark text-light m-1" (click)='signoutProcess()'>Sign Out</button>
+
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

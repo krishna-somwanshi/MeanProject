@@ -1,0 +1,15 @@
+#logLeft{
+    background-image: url();
+    width: 100vh;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#logRight{
+    background-image: url(https://picsum.photos/id/6/1200/1400);
+    width: 100vh;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
