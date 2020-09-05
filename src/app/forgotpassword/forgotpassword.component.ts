@@ -1,19 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-
-// @Component({
-//   selector: 'app-forgotpassword',
-//   templateUrl: './forgotpassword.component.html',
-//   styleUrls: ['./forgotpassword.component.css']
-// })
-// export class ForgotpasswordComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit(): void {
-//   }
-
-// }
-
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -26,9 +10,8 @@ import { HttpClient } from '@angular/common/http';
 export class ForgotpasswordComponent implements OnInit {
 
   myFormGroup = new FormGroup({
-    "Email": new FormControl(),
+    "username": new FormControl(),
     "Password": new FormControl(),
-    "Confirm_Password": new FormControl()
   });
 
   constructor(private http: HttpClient) { }
@@ -41,7 +24,7 @@ export class ForgotpasswordComponent implements OnInit {
     const input = this.myFormGroup.value;
     console.log(input);
 
-    const url = "http://localhost:3000/forgotpassword";
+    const url = "http://localhost:3000/forget";
     await this.http.post(url, input).toPromise();
     this.myFormGroup.reset();
   }

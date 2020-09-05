@@ -16,35 +16,23 @@ export class LoginComponent implements OnInit {
   public uiInvalidCredential = false;
 
   public fbFormGroup = this.fb.group({
-    Email: ['', Validators.required],
-    Password: ['', Validators.required],
+    username: ['', Validators.required],
+    password: ['', Validators.required],
   });
 
   constructor(private fb: FormBuilder, private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void { }
 
-  // loginProcessHere() {
-  //   const data = this.fbFormGroup.value;
-  //   console.log(data);
 
-  //   if (data.username === 'angular' && data.password === 'admin') {
-  //     sessionStorage.setItem('sid', 'true');
-  //     this.router.navigate(['home/home-page']);
-  //   } else {
-  //     this.uiInvalidCredential = true;
-  //   }
-  // }
-
-  // Using DB validation
   async loginProcessHere() {
     const data = this.fbFormGroup.value;
     console.log(data);
-    const url = "http://localhost:3000/login";
+    const url = "http://localhost:3000/auth-user";
     const result: any = await this.http.post(url, data).toPromise();
     if (result.opr) {
       sessionStorage.setItem('sid', 'true');
-      this.router.navigate(['home']);
+      this.router.navigate(['home/home-page']);
     } else {
       this.uiInvalidCredential = true;
     }

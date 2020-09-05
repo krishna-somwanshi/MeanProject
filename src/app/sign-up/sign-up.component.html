@@ -1,137 +1,48 @@
-<main class="">
-    <section class="form my-5 mx-5">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-lg-5">
-                    <img src="https://i.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I"
-                        class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-7 px-5 pt-3">
-                    <h1>Sign Up</h1>
-
-                    <form [formGroup]="myFormGroup">
-                        <!-- First_Name -->
-                        <div class="form-row">
-                            <div class="col-lg-9">
-                                <input type="text" placeholder="First_Name" class="form-control my-1 p-4"
-                                    id="First_Name" formControlName="First_Name" />
-                                <span class="error" *ngIf="First_Name.invalid && First_Name.touched"
-                                    style="color: red; margin-left: 15px;">Invalid credentials.</span>
-                            </div>
-
-                        </div>
-
-
-                        <!-- Last_Name -->
-                        <div class="form-row">
-                            <div class="col-lg-9">
-                                <input type="text" placeholder="Last_Name" class="form-control my-1 p-4" id="Last_Name"
-                                    formControlName="Last_Name" />
-                                <span *ngIf="Last_Name.invalid && Last_Name.touched"
-                                    style="color: red;margin-left: 15px; ">Invalid credentials.</span>
-                            </div>
-                        </div>
-
-                        <!-- email -->
-                        <div class="form-row">
-                            <div class="col-lg-9">
-                                <input type="email" placeholder="E-mail" class="form-control my-1 p-4" id="Email"
-                                    formControlName="Email" />
-                                <span *ngIf="Email.invalid && Email.touched"
-                                    style="color: red;margin-left: 15px; ">Invalid credentials.</span>
-
-                            </div>
-                        </div>
-                        <!-- Password -->
-                        <div class="form-row">
-                            <div class="col-lg-9">
-                                <input type="password" placeholder="Password" class="form-control my-1 p-4"
-                                    id="Password" formControlName="Password" />
-                            </div>
-                        </div>
-                        <!-- ConfirmPassword -->
-                        <div class="form-row">
-                            <div class="col-lg-9">
-                                <input type="password" placeholder="Confirm_Password" class="form-control my-1 p-4"
-                                    id="Confirm_Password" formControlName="Confirm_Password" />
-                            </div>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <div class="form-row">
-                            <div class="col-lg-9">
-                                <button type="button" class="btn1" (click)="registerUser()">Sign Up</button>
-                            </div>
-                        </div>
-
-                        <p>Already have an account? <a routerLink="/login">Login here</a></p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-
-
-
-
-
-
-
-
-
-
-<!-- <button>Register</button>
-<button>Go To Login</button> -->
-
-<!-- <div class="container-fluid">
+<div class="container-fluid">
     <div class="row" style="height: 100vh">
-        Left Block
+        <!-- Left Block -->
         <div class="col bg-info d-flex flex-column justify-content-center align-items-center">
             <div>
-                <fa-icon [icon]="FAirFreshner" style="font-size: 54px"></fa-icon>
+                <fa-icon [icon]="faMapSigns" style="font-size: 54px"></fa-icon>
             </div>
-            <div class="h3">Welcome To Job Directory </div>
-            <div class="h6">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid,
-                harum!
-            </div>
+            <div class="h3" style="font-size:40px">Welcome To Job Directory </div>
         </div>
 
-        Right Block
-        <div class="col bg-light d-flex flex-column justify-content-center align-items-center"
+        <!-- Right Block -->
+        <div id="sign" class="col bg-light d-flex flex-column justify-content-center align-items-center"
             [formGroup]="fbFormGroup">
             <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
-                A simple danger alert—check it out!
+                Invalid Credentials
             </div>
 
-            <div class="h4">Application Register</div>
+            <div class="h4 text-light">Application Register</div>
 
             <div>
-                <input type="text" placeholder="Enter Username" class="form-control" formControlName="username" />
+                <input type="text" placeholder="Enter Username" class="form-control mt-3" formControlName="username" />
+                <span *ngIf="username.invalid && username.touched" style="color: red;margin-left: 15px; ">Invalid
+                    credentials.</span>
             </div>
 
-            <div class="mt-1">
+            <div class="mt-2">
                 <input type="password" placeholder="Enter Password" class="form-control" formControlName="password" />
             </div>
 
-            <div class="mt-1">
+            <div class="mt-2">
                 <input type="text" placeholder="Enter Email" class="form-control" formControlName="email" />
+                <span *ngIf="email.invalid && email.touched" style="color: red;margin-left: 15px; ">Invalid
+                    credentials.</span>
             </div>
 
-            <div class="mt-1">
+            <div class="mt-2">
                 <input type="text" placeholder="+91-xx xxx xxx xx" class="form-control" formControlName="mobile" />
             </div>
 
-            <button class="btn btn-sm btn-info mt-2 mb-2" [disabled]="!fbFormGroup.valid" (click)="registerHere()">
+            <button class="btn btn-sm btn-info mt-3 mb-2" (click)="registerHere()">
                 Register Here
             </button>
 
             <a routerLink="/login">Login Here</a>
         </div>
+
     </div>
 </div>
-
-
--->

@@ -8,16 +8,16 @@
             <div class="h2 text-light"> Login Here </div>
 
             <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
-                A simple danger alert—check it out!
+                Invalid Credentials
             </div>
 
 
             <div>
-                <input type="text" placeholder="Enter Email" class="form-control" formControlName="Email" />
+                <input type="text" placeholder="Enter username" class="form-control" formControlName="username" />
             </div>
 
-            <div class="mt-1">
-                <input type="password" placeholder="Enter Password" class="form-control" formControlName="Password" />
+            <div class=" mt-1">
+                <input type="password" placeholder="Enter password" class="form-control" formControlName="password" />
             </div>
 
             <button class="btn btn-sm btn-info mt-1" [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()">
@@ -25,7 +25,7 @@
             </button>
 
 
-            <!-- <p><a href="#link"></a></p> -->
+            <p><a href="#link"></a></p>
             <p><a routerLink="/forgotpassword">Forgot Password</a></p>
 
 
